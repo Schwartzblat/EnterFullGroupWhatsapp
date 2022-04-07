@@ -75,9 +75,11 @@ const getInfo = m.findModule("sendQueryGroupInvite")[0].sendQueryGroupInvite;
 const joinGroup = m.findModule("sendJoinGroupViaInvite")[0].sendJoinGroupViaInvite;
 let start = async (code)=>{
     while((await getInfo(code)).size===257){
-        await sleep(5000);
+        await sleep(1000);
     }
     await joinGroup(code);
 }
 start("Invite code HERE")
 ```
+press Enter and let it run.
+You will join the group when someone will leave.
